@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+header {
+    background-color: #1f7893;
+    background-image: url("https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}

@@ -5,21 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Soccer Info</title>
 </head>
 <body>
-    <h1>Soccer Player Finder</h1>
-    <p id="name">Name</p>
-    <p id="age">Age</p>
-    <p id="club">Club</p>
-    <p id="league">League</p>
-    <p id="goals">Goals</p>
-    <p id="assists">Assists</p>
-    <form>
-        <input type="text" placeholder="Type in a player name"/>
-        <input type="submit" value="Find player" />
-      </form>
+    <header>
+        <h1>Soccer Player Finder</h1>
+        <p>Type in the name of your favorite player below!</p>
+        <form>
+            <input type="text" placeholder="Type in a player name"/>
+            <input type="submit" value="Find player" />
+          </form>
+    </header>
+
+    <main id="results">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> 
+    </main>
+
+    
     <script src="./js/script.js"></script>
 </body>
 </html>
