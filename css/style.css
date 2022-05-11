@@ -14,3 +14,20 @@ header {
     padding-top: 300px;
     padding-bottom: 300px;
 }
+
+form, h1, p {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    padding-top: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    justify-content: flex-end;
+}
