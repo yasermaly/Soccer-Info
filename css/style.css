@@ -32,12 +32,62 @@ main {
     "name img"
     "birth-date img"
     "birth-place img"
-    
+    "nationality img"
+    "height img"
+    "weight img";
+
     padding-top: 30px;
 }
 
+#name {
+    grid-area: name;
+    text-align: center;
+}
 
+#birth-date {
+    grid-area: birth-date;
+    text-align: center;
+}
+
+#birth-place {
+    grid-area: birth-place;
+    text-align: center;
+}
+
+#nationality {
+    grid-area: nationality;
+    text-align: center;
+}
+
+#height {
+    grid-area: height;
+    text-align: center;
+}
+
+#weight {
+    grid-area: weight;
+    text-align: center;
+}
 
 img {
+    grid-area: img;
+    width: 350px;
+    height: auto;
+    position
+}
+
+@media only screen and (max-width: 368px) {
     
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "img"
+            "name" 
+            "birth-date"
+            "birth-place" 
+            "nationality"
+            "height" 
+            "weight"
+    }
 }
