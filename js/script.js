@@ -4,40 +4,52 @@ const apiToken = "MMYVfqsnHtw5rzbBPzmwyiRq6wIAV0bCuV99DTlXwKNJd78W3ptKvQ8n88hU"
 const $main = $('main')
 const $name = $('#name')
 const $dateOfBirth = $('#birth-date')
-const $club = $('#club')
-const $league = $('league')
-const $goals = $('#goals')
-const $ul = $('ul')
+const $nationality = $('#nationality')
+const $height = $('#height')
+const $weight = $('#weight')
+const $img = $('img')
 const $form = $('form')
 const $input = $(`input[type="text"]`)
 
+    // SOCCER INFO AJAX REQUEST TO RETRIEVE DATA FROM API
 
-// SOCCER INFO AJAX REQUEST TO RETRIEVE DATA FROM API
+$form.on('submit', handleGetData)
 
-  $form.on('submit', handleGetData)
+function handleGetData(event){ 
 
-  function handleGetData(event){ 
-  
-      event.preventDefault()
-      const userInput = $input.val()
-      const userInput2 = userInput.replace(/ /g, '+')
-      const settings = {
-        "url": `https://soccer.sportmonks.com/api/v2.0/players/search/${userInput2}?api_token=${apiToken}&include=`,
-        "method": "GET",
-        "timeout": 0,
-      };
-      console.log(userInput)
-      console.log(apiToken)
-    
+    event.preventDefault()
+    const userInput = $input.val()
+    const userInput2 = userInput.replace(/ /g, '+')
+    const settings = {
+    "url": `https://soccer.sportmonks.com/api/v2.0/players/search/${userInput2}?api_token=${apiToken}&include=`,
+    "method": "GET",
+    "timeout": 0,
+    };
+    console.log(userInput)
+    console.log(apiToken)
+
     $.ajax(settings).then(function (data) {
-      console.log(data.data[1]);
-      $name.text(data.data[1].display_name)
-      $main.append(`<img src="${data.data[1].image_path}"/>`)
-      //const $li = $ul.append(`<li>${data[0].}</li>`)
-    });
+    // empty previous results    
     
-  $input.val('')
-  }
+    console.log(data.data);
+    //display first & last name
+    $name.text(`Name: ${data.data[0].display_name}`)
+    //display date of birth
+    $dateOfBirth.text(`Date of birth: ${data.data[0].birthdate}`)
+    //display place of birth
+    $placeOfBirth.text(`Place of birth: ${data.data[0].birthplace}`)
+    //display nationality
+    $nationality.text(`Nationality: ${data.data[0].nationality}`)
+    //display height
+    $height.text(`Height: ${data.data[0].height}`)
+    //display weight
+    $weight.text(`Weight: ${data.data[0].weight}`)
+    //display image
+    $img.attr('src',data.data[0].image_path)
+    });
+    //clear the input search field
+    $input.val('')
+}
 
 
 // SPORTMONKS SAMPLE AJAX REQEST

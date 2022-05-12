@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    height: 100vh;
     
 }
 
@@ -11,8 +12,8 @@ header {
     background-size: cover;
     background-blend-mode: multiply;
     color: white;
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 form, h1, p {
@@ -20,14 +21,23 @@ form, h1, p {
 }
 
 main {
-    display: flex;
+    background-color: #1f7893;
+    height: 500px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.2rem;
+    grid-template-areas: 
+    "name img"
+    "birth-date img"
+    "birth-place img"
+    
     padding-top: 30px;
 }
 
-li {
-    list-style: none;
-}
+
 
 img {
-    justify-content: flex-end;
+    
 }
