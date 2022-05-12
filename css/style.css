@@ -22,7 +22,7 @@ form, h1, p {
 
 main {
     background-color: #1f7893;
-    height: 500px;
+    height: 600px;
     color: white;
     display: grid;
     grid-template-columns: 1fr 2fr;
