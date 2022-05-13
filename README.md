@@ -11,7 +11,7 @@ HTML, CSS, JavaScript, jQuery, AJAX, Git, Github, SportMonks API
 <img width="838" alt="Screen Shot 2022-05-12 at 8 23 43 AM" src="https://user-images.githubusercontent.com/77906579/168110934-4b00689a-7ce4-400b-a711-19b9c2aa8263.png">
 
 # Getting Started:
-The website is deployed on Netlify at this link: https://hilarious-pothos-b4d276.netlify.app/
+The website is deployed on Netlify at this link: https://soccerplayerfinder.netlify.app/
 
 # Future Enhancements:
 Adding more functionality and more statistics per player.
